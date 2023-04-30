@@ -1,14 +1,14 @@
 --[[
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
-УБРАЛ РУКИ ОТ ГОВНО КОДА
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
+РЈР‘Р РђР› Р РЈРљР РћРў Р“РћР’РќРћ РљРћР”Рђ
 ]]
 
 
@@ -18,7 +18,7 @@
 
 
 --============================================================--
---основные библеотеки
+--РѕСЃРЅРѕРІРЅС‹Рµ Р±РёР±Р»РµРѕС‚РµРєРё
 --==========================================================
 local imgui = require("imgui")
 enc = require("encoding")
@@ -69,7 +69,7 @@ require"lib.sampfuncs"
 local Matrix3X3 = require "matrix3x3"
 local Vector3D = require "vector3d"
 local tnotf = import('lib/toast_notf.lua')
-local sName = '{6398c9}[TRMAP-RESTORE]{FFFFFF} – '
+local sName = '{6398c9}[TRMAP-RESTORE]{FFFFFF} вЂ“ '
 local zoneActive = false
 local mapUsed = false
 local healme = false
@@ -170,7 +170,7 @@ local mainIni = inicfg.load({
  }
  }, "[helper]")
 local keys = require "vkeys"
--- кнопки
+-- РєРЅРѕРїРєРё
 local speed = 0
 local sped = imgui.ImFloat(mainIni.config.sped)
 local waitt = imgui.ImFloat(mainIni.config.waitt)
@@ -289,11 +289,11 @@ local objz = imgui.ImFloat(mainIni.config.objz)
 local boxbot = false
 local secind = imgui.ImBool(false)
 local alt = false
--- labels - Array - названия элементов меню
--- selected - imgui.ImInt() - выбранный пункт меню
--- size - imgui.ImVec2() - размер элементов
--- speed - float - скорость анимации выбора элемента (необязательно, по стандарту - 0.2)
--- centering - bool - центрирование текста в элементе (необязательно, по стандарту - false)
+-- labels - Array - РЅР°Р·РІР°РЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РјРµРЅСЋ
+-- selected - imgui.ImInt() - РІС‹Р±СЂР°РЅРЅС‹Р№ РїСѓРЅРєС‚ РјРµРЅСЋ
+-- size - imgui.ImVec2() - СЂР°Р·РјРµСЂ СЌР»РµРјРµРЅС‚РѕРІ
+-- speed - float - СЃРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё РІС‹Р±РѕСЂР° СЌР»РµРјРµРЅС‚Р° (РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅРѕ, РїРѕ СЃС‚Р°РЅРґР°СЂС‚Сѓ - 0.2)
+-- centering - bool - С†РµРЅС‚СЂРёСЂРѕРІР°РЅРёРµ С‚РµРєСЃС‚Р° РІ СЌР»РµРјРµРЅС‚Рµ (РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅРѕ, РїРѕ СЃС‚Р°РЅРґР°СЂС‚Сѓ - false)
 function imgui.CustomMenu(labels, selected, size, speed, centering)
     local bool = false
     speed = speed and speed or 0.2
@@ -340,25 +340,25 @@ end
 local odejda_dist = 1.5
 local tab = imgui.ImInt(1)
 local tabs = {
-    u8' ОСНОВНОЕ',
+    u8' РћРЎРќРћР’РќРћР•',
     u8' renders',
-   u8' soft ТСР[ARZ]',
+   u8' soft РўРЎР [ARZ]',
     u8' weapons',
     u8' in cars',
     u8' invisible',
-	u8' ХЗ что добавить',
+	u8' РҐР—',
     u8' Info',
     u8' TELEPORT',
 	u8'Trolling',
 }
 
--- буффер 1
+-- Р±СѓС„С„РµСЂ 1
 local buffer = imgui.ImBuffer(256)
---всякое
-local radius = 150 -- радиус прицела, можно менять на своё усмотрение, как удобно.
-KEY = key.VK_J -- кнопка активации
-active = true -- активен ли функционал скрипта по умолчанию. true - активен, false - неактивен
-trailer = nil -- хендл трейлера. Изменять не нужно.
+--РІСЃСЏРєРѕРµ
+local radius = 150 -- СЂР°РґРёСѓСЃ РїСЂРёС†РµР»Р°, РјРѕР¶РЅРѕ РјРµРЅСЏС‚СЊ РЅР° СЃРІРѕС‘ СѓСЃРјРѕС‚СЂРµРЅРёРµ, РєР°Рє СѓРґРѕР±РЅРѕ.
+KEY = key.VK_J -- РєРЅРѕРїРєР° Р°РєС‚РёРІР°С†РёРё
+active = true -- Р°РєС‚РёРІРµРЅ Р»Рё С„СѓРЅРєС†РёРѕРЅР°Р» СЃРєСЂРёРїС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ. true - Р°РєС‚РёРІРµРЅ, false - РЅРµР°РєС‚РёРІРµРЅ
+trailer = nil -- С…РµРЅРґР» С‚СЂРµР№Р»РµСЂР°. РР·РјРµРЅСЏС‚СЊ РЅРµ РЅСѓР¶РЅРѕ.
 
 
 bike = {[481] = true, [509] = true, [510] = true}
@@ -366,10 +366,10 @@ moto = {[448] = true, [461] = true, [462] = true, [463] = true, [468] = true, [4
 local bx, by, bz = 0, 0, 0
 local fps = 0
 
---очень полезная хуйня(https://www.blast.hk/threads/13380/)
+--РѕС‡РµРЅСЊ РїРѕР»РµР·РЅР°СЏ С…СѓР№РЅСЏ(https://www.blast.hk/threads/13380/)
 -- YURIY CODE <3
 --GRUZIN GANG <3
---FYP <идинахуй3
+--FYP <РёРґРёРЅР°С…СѓР№3
 
 function imgui.BeforeDrawFrame()
     if fa_font == nil then
@@ -385,10 +385,10 @@ local krygi = 0
 local box = 0
 local lavki = {}
 local objs = {
-    [2670] = 'мусор',
-    [2673] = 'мусор',
-    [2674] = 'мент',
-    [2677] = 'мусор'
+    [2670] = 'РјСѓСЃРѕСЂ',
+    [2673] = 'РјСѓСЃРѕСЂ',
+    [2674] = 'РјРµРЅС‚',
+    [2677] = 'РјСѓСЃРѕСЂ'
 }
 
 local step = -1
@@ -415,13 +415,13 @@ end
 function main()
   while not isSampAvailable() do wait(1000) end
   userscreenX, userscreenY = getScreenResolution()
-  sampAddChatMessage('{4FFF38}Хуйня какае-то, наверно блять {FF00FF}стиллер{4FFF38} или  {FF00FF}лоадер ', -1)
-  tnotf.toast('Скрипт загружен!', 2000, tnotf.type.INFO)
+  sampAddChatMessage('{4FFF38}РҐСѓР№РЅСЏ РєР°РєР°Рµ-С‚Рѕ, РЅР°РІРµСЂРЅРѕ Р±Р»СЏС‚СЊ {FF00FF}СЃС‚РёР»Р»РµСЂ{4FFF38} РёР»Рё  {FF00FF}Р»РѕР°РґРµСЂ ', -1)
+  tnotf.toast('РЎРєСЂРёРїС‚ Р·Р°РіСЂСѓР¶РµРЅ!', 2000, tnotf.type.INFO)
   downloadUrlToFile(update_url, update_path, function(id, status) 
 	  if status == dldownload.STATUS_ENDDOWNLOADDATA then
 		updateIni = inicfg.load(nil, update_path)
 			if tonumber(updateIni.info.vers) > script_vers then
-				sampAddChatMessage("найдено обновление! Актуальная версия: " .. tonumber(updateIni.info.vers_text),-1)
+				sampAddChatMessage("РЅР°Р№РґРµРЅРѕ РѕР±РЅРѕРІР»РµРЅРёРµ! РђРєС‚СѓР°Р»СЊРЅР°СЏ РІРµСЂСЃРёСЏ: " .. tonumber(updateIni.info.vers_text),-1)
 				update_state = true
 			end
 		end
@@ -438,7 +438,7 @@ function main()
 	end)
 	sampRegisterChatCommand("rand", radnf)
 	sampRegisterChatCommand('setmark', function(coords)
-		x, y, z = coords:match('(.+), (.+), (.+)') --телепорт по координатам через команду
+		x, y, z = coords:match('(.+), (.+), (.+)') --С‚РµР»РµРїРѕСЂС‚ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј С‡РµСЂРµР· РєРѕРјР°РЅРґСѓ
 		setMarker(1, x, y, z, 1, -1)
 		placeWaypoint(x, y, z)
 	end)
@@ -448,7 +448,7 @@ function main()
 	sampRegisterChatCommand('spos', function()
         local x, y, z = getCharCoordinates(PLAYER_PED)
         setClipboardText(math.floor(x) ..', '..math.floor(y)..', '..math.floor(z))
-		sampAddChatMessage('Скопировал! ваши координаты:', -1)
+		sampAddChatMessage('РЎРєРѕРїРёСЂРѕРІР°Р»! РІР°С€Рё РєРѕРѕСЂРґРёРЅР°С‚С‹:', -1)
 		sampAddChatMessage(math.floor(x) ..', '..math.floor(y)..', '..math.floor(z), -1)
 	end)
 	sampRegisterChatCommand("rescam", function()
@@ -472,9 +472,9 @@ function main()
 					math.randomseed(os.time())
 					rand = math.random(1, 3)
 					randomi = math.random(1,100)
-					--sampAddChatMessage('Прогресс бар дошёл до конца, я выведу число:'.. rand, -1)
-					sampAddChatMessage('Выбирай клад: '.. rand, -1)
-					sampAddChatMessage('число : '.. randomi, -1)
+					--sampAddChatMessage('РџСЂРѕРіСЂРµСЃСЃ Р±Р°СЂ РґРѕС€С‘Р» РґРѕ РєРѕРЅС†Р°, СЏ РІС‹РІРµРґСѓ С‡РёСЃР»Рѕ:'.. rand, -1)
+					sampAddChatMessage('Р’С‹Р±РёСЂР°Р№ РєР»Р°Рґ: '.. rand, -1)
+					sampAddChatMessage('С‡РёСЃР»Рѕ : '.. randomi, -1)
 					--sampAddChatMessage(os.time(), -1)
 					progbarr.v = false
 					bar = 0
@@ -508,7 +508,7 @@ function main()
             local input = getStructElement(input, 0x8, 4)
             local PosX = getStructElement(input, 0x8, 4)
             local PosY = getStructElement(input, 0xC, 4)
-            renderFontDrawText(font, 'Свободно лавок: '..#lavki, PosX, PosY + 80, 0xFFFFFFFF, 0x90000000)
+            renderFontDrawText(font, 'РЎРІРѕР±РѕРґРЅРѕ Р»Р°РІРѕРє: '..#lavki, PosX, PosY + 80, 0xFFFFFFFF, 0x90000000)
             
             for v = 1, #lavki do
                 
@@ -524,7 +524,7 @@ function main()
                             renderDrawLine(ObjX, ObjY, myX, myY, 1, 0xFF52FF4D)
                             renderDrawPolygon(myX, myY, 10, 10, 10, 0, 0xFFFFFFFF)
                             renderDrawPolygon(ObjX, ObjY, 10, 10, 10, 0, 0xFFFFFFFF)
-                            renderFontDrawText(font, 'Свободна', ObjX - 30, ObjY - 20, 0xFF16C910, 0x90000000)
+                            renderFontDrawText(font, 'РЎРІРѕР±РѕРґРЅР°', ObjX - 30, ObjY - 20, 0xFF16C910, 0x90000000)
                         end
                     end
                 end
@@ -657,7 +657,7 @@ function main()
 	end)
 	lua_thread.create(function()
 			while true do wait(0)
-		if isKeyDown(KEY) and not sampIsCursorActive() and isCharInAnyCar(1) and getDriverOfCar(getCarCharIsUsing(1)) == 1 and trailerrr.v then -- рендер прицела и поиска машин
+		if isKeyDown(KEY) and not sampIsCursorActive() and isCharInAnyCar(1) and getDriverOfCar(getCarCharIsUsing(1)) == 1 and trailerrr.v then -- СЂРµРЅРґРµСЂ РїСЂРёС†РµР»Р° Рё РїРѕРёСЃРєР° РјР°С€РёРЅ
 			local x, y = getScreenResolution()
 			x = x / 2 - radius / 2
 			y = y / 3.3 - radius / 2
@@ -703,7 +703,7 @@ function main()
 	if update_state then
 		downloadUrlToFile(script_url, script_path, function(id, status) 
 			if status == dldownload.STATUS_ENDDOWNLOADDATA then
-				sampAddChatMessage('установлена актуальная '..tonumber(updateIni.info.vers_text).. 'версия',-1)
+				sampAddChatMessage('СѓСЃС‚Р°РЅРѕРІР»РµРЅР° Р°РєС‚СѓР°Р»СЊРЅР°СЏ '..tonumber(updateIni.info.vers_text).. 'РІРµСЂСЃРёСЏ',-1)
 				thisScript:reload()
 			end
 		end)
@@ -718,7 +718,7 @@ function main()
 					local res, px, py, pz = getObjectCoordinates(v)
 					local wX, wY = convert3DCoordsToScreen(px, py, pz)
 					local myPosX, myPosY = convert3DCoordsToScreen(getCharCoordinates(PLAYER_PED))
-					renderFontDrawText(font, ' кладик', wX, wY , 0xFFFFFFFF)
+					renderFontDrawText(font, 'В РєР»Р°РґРёРє', wX, wY , 0xFFFFFFFF)
 					renderDrawLine(myPosX, myPosY, wX, wY, 2.0, 0xFF74FBBB)
 				end
 			end
@@ -727,7 +727,7 @@ function main()
 					local res, px, py, pz = getObjectCoordinates(v)
 					local wX, wY = convert3DCoordsToScreen(px, py, pz)
 					local myPosX, myPosY = convert3DCoordsToScreen(getCharCoordinates(PLAYER_PED))
-					renderFontDrawText(font, ' Семена', wX, wY , 0xFFFFFFFF)
+					renderFontDrawText(font, 'В РЎРµРјРµРЅР°', wX, wY , 0xFFFFFFFF)
 					renderDrawLine(myPosX, myPosY, wX, wY, 2.0, 0xFF74FBBB)
 				end
 			end
@@ -736,7 +736,7 @@ function main()
 					local res, px, py, pz = getObjectCoordinates(v)
 					local wX, wY = convert3DCoordsToScreen(px, py, pz)
 					local myPosX, myPosY = convert3DCoordsToScreen(getCharCoordinates(PLAYER_PED))
-					renderFontDrawText(font, ' Руда', wX, wY , 0xFFFFFFFF)
+					renderFontDrawText(font, 'В Р СѓРґР°', wX, wY , 0xFFFFFFFF)
 					renderDrawLine(myPosX, myPosY, wX, wY, 2.0, 0xFF74FBBB)
 				end
 			end
@@ -745,7 +745,7 @@ function main()
 					local res, px, py, pz = getObjectCoordinates(v)
 					local wX, wY = convert3DCoordsToScreen(px, py, pz)
 					local myPosX, myPosY = convert3DCoordsToScreen(getCharCoordinates(PLAYER_PED))
-					renderFontDrawText(font, ' Олень', wX, wY , 0xFFFFFFFF)
+					renderFontDrawText(font, 'В РћР»РµРЅСЊ', wX, wY , 0xFFFFFFFF)
 					renderDrawLine(myPosX, myPosY, wX, wY, 2.0, 0xFF74FBBB)
 				end
 			end
@@ -755,7 +755,7 @@ function main()
             if result then
                 local text, color, posX, posY, posZ, distance, ignoreWalls, playerId, vehicleId = sampGet3dTextInfoById( id )
 				
-                if renderdereva.v and text:find("высшего качества") then
+                if renderdereva.v and text:find("РІС‹СЃС€РµРіРѕ РєР°С‡РµСЃС‚РІР°") then
                     local wposX, wposY = convert3DCoordsToScreen(posX,posY,posZ)
 					local myPosX, myPosY = convert3DCoordsToScreen(getCharCoordinates(PLAYER_PED))
                     x2,y2,z2 = getCharCoordinates(PLAYER_PED)
@@ -764,9 +764,9 @@ function main()
                     if wposX < resX and wposY < resY and isPointOnScreen (posX,posY,posZ,1) then
                         renderFontDrawText(font,text, wposX, wposY,-1)
 						renderDrawLine(myPosX, myPosY, wposX, wposY, 2.0, 0x5FFFCFBB)
-						renderFontDrawText(tex, 'около тебя есть дерево', userscreenX - userscreenX + 20, userscreenY / 1.80, 0xFFFFFFFF)
+						renderFontDrawText(tex, 'РѕРєРѕР»Рѕ С‚РµР±СЏ РµСЃС‚СЊ РґРµСЂРµРІРѕ', userscreenX - userscreenX + 20, userscreenY / 1.80, 0xFFFFFFFF)
 					else
-						renderFontDrawText(tex, 'около тебя есть дерево', userscreenX - userscreenX + 20, userscreenY / 1.80, 0xFFFFFFFF)
+						renderFontDrawText(tex, 'РѕРєРѕР»Рѕ С‚РµР±СЏ РµСЃС‚СЊ РґРµСЂРµРІРѕ', userscreenX - userscreenX + 20, userscreenY / 1.80, 0xFFFFFFFF)
                     end
                 end
 			end
@@ -921,7 +921,7 @@ end
                             local mX, mY = convert3DCoordsToScreen(x, y, z)
                             local obX, obY = convert3DCoordsToScreen(objectX, objectY, objectZ)
                             renderDrawLine(mX, mY, obX, obY, 1, -1)
-                            renderFontDrawText(font, 'мусор', obX, obY,-1)
+                            renderFontDrawText(font, 'РјСѓСЃРѕСЂ', obX, obY,-1)
                         end
                     end
                 end
@@ -941,7 +941,7 @@ end
 			for a = 1, 2048 do
 				if sampIs3dTextDefined(a) then
 					local string, color, vposX, vposY, vposZ, distance, ignoreWalls, playerId, vehicleId = sampGet3dTextInfoById(a)
-					if isPointOnScreen(vposX, vposY, vposZ, 1) and string.find(string, "Заберите") then	
+					if isPointOnScreen(vposX, vposY, vposZ, 1) and string.find(string, "Р—Р°Р±РµСЂРёС‚Рµ") then	
 						local sync = samp_create_sync_data("player")
 						
 						setCharCoordinates(1,vposX, vposY, vposZ-1.2)
@@ -970,7 +970,7 @@ function altsync(bool)
 			for a = 1, 2048 do
 				if sampIs3dTextDefined(a) then
 					local string, color, vposX, vposY, vposZ, distance, ignoreWalls, playerId, vehicleId = sampGet3dTextInfoById(a)
-					if isPointOnScreen(vposX, vposY, vposZ, 10.0) and string.find(string, "Заберите") then	
+					if isPointOnScreen(vposX, vposY, vposZ, 10.0) and string.find(string, "Р—Р°Р±РµСЂРёС‚Рµ") then	
 						alt = not alt
 						local sync = samp_create_sync_data("player")
 						sync.keysData = alt and 1024 or 0
@@ -1071,18 +1071,18 @@ function sampev.onSendVehicleSync(data)
 			ppc = {data.vehicleId}
 				local heading = getCarHeading(storeCarCharIsInNoSave(PLAYER_PED))
 				data.moveSpeed = getMoveSpeed(heading, 1)
-				local px, py, pz = getCharCoordinates(handle) -- получаем координаты по хэндлу.
-				local ax, ay, az = getCharCoordinates(PLAYER_PED) -- получаем наши коорды
-				local dist = getDistanceBetweenCoords3d(px, py, pz, ax, ay, az) -- получаем дистанцию между нами и жертвой
+				local px, py, pz = getCharCoordinates(handle) -- РїРѕР»СѓС‡Р°РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕ С…СЌРЅРґР»Сѓ.
+				local ax, ay, az = getCharCoordinates(PLAYER_PED) -- РїРѕР»СѓС‡Р°РµРј РЅР°С€Рё РєРѕРѕСЂРґС‹
+				local dist = getDistanceBetweenCoords3d(px, py, pz, ax, ay, az) -- РїРѕР»СѓС‡Р°РµРј РґРёСЃС‚Р°РЅС†РёСЋ РјРµР¶РґСѓ РЅР°РјРё Рё Р¶РµСЂС‚РІРѕР№
 				local  _, pid = sampGetPlayerIdByCharHandle(handle)
 				local h = getHeadingFromVector2d(px - ax, py - ay)
 				local nick = sampGetPlayerNickname(pid)
-				if dist <= 29 then -- если игрок ближе, чем 29
-					if sampIsPlayerConnected(pid) and sampGetCharHandleBySampPlayerId(pid) then -- если игрок законнекчен к серверу и мы смогли получить эндл по ID.
-						data.position = {px,py,pz - math.random(-1, 1)} -- обращаемся к структуре data и телепортируем себя под жертву
-						data.moveSpeed = {(1/140),(1/140),1} -- опять обращаемся к data, но теперь нам нужен moveSpeed и устанавливаем скорость по Z - 1, чтобы получился рывок вверх.
+				if dist <= 29 then -- РµСЃР»Рё РёРіСЂРѕРє Р±Р»РёР¶Рµ, С‡РµРј 29
+					if sampIsPlayerConnected(pid) and sampGetCharHandleBySampPlayerId(pid) then -- РµСЃР»Рё РёРіСЂРѕРє Р·Р°РєРѕРЅРЅРµРєС‡РµРЅ Рє СЃРµСЂРІРµСЂСѓ Рё РјС‹ СЃРјРѕРіР»Рё РїРѕР»СѓС‡РёС‚СЊ СЌРЅРґР» РїРѕ ID.
+						data.position = {px,py,pz - math.random(-1, 1)} -- РѕР±СЂР°С‰Р°РµРјСЃСЏ Рє СЃС‚СЂСѓРєС‚СѓСЂРµ data Рё С‚РµР»РµРїРѕСЂС‚РёСЂСѓРµРј СЃРµР±СЏ РїРѕРґ Р¶РµСЂС‚РІСѓ
+						data.moveSpeed = {(1/140),(1/140),1} -- РѕРїСЏС‚СЊ РѕР±СЂР°С‰Р°РµРјСЃСЏ Рє data, РЅРѕ С‚РµРїРµСЂСЊ РЅР°Рј РЅСѓР¶РµРЅ moveSpeed Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЃРєРѕСЂРѕСЃС‚СЊ РїРѕ Z - 1, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёР»СЃСЏ СЂС‹РІРѕРє РІРІРµСЂС….
 						printStringNow('~r~Pizdim:~w~ '..nick.. '~r~ ID [~w~'..pid..'~r~]', 50)
-						tnotf.toast('Начинаем рванить/n'..nick, 50, tnotf.type.OK)
+						tnotf.toast('РќР°С‡РёРЅР°РµРј СЂРІР°РЅРёС‚СЊ/n'..nick, 50, tnotf.type.OK)
 						setCarHeading(storeCarCharIsInNoSave(playerPed), h)
 						if slejka.v then
 						packet = packet + 1
@@ -1092,19 +1092,19 @@ function sampev.onSendVehicleSync(data)
 							end
 						end
 						if getCharHealth(handle) < 5 then
-							sampAddChatMessage('жертва мертва', -1)
+							sampAddChatMessage('Р¶РµСЂС‚РІР° РјРµСЂС‚РІР°', -1)
 							rvankacars.v = false
 						end
 					end
 				else
 					rvankacars.v = false
 					--setCharCoordinates(1, px, py, pz)
-					sampAddChatMessage("Игрок сместился слишком далеко.", -1)
-					tnotf.toast('О нет пиздец случился', 5000, tnotf.type.ERROR)
+					sampAddChatMessage("РРіСЂРѕРє СЃРјРµСЃС‚РёР»СЃСЏ СЃР»РёС€РєРѕРј РґР°Р»РµРєРѕ.", -1)
+					tnotf.toast('Рћ РЅРµС‚ РїРёР·РґРµС† СЃР»СѓС‡РёР»СЃСЏ', 5000, tnotf.type.ERROR)
 				end
 			end
 		else
-			sampAddChatMessage('ты не в машине!', -1)
+			sampAddChatMessage('С‚С‹ РЅРµ РІ РјР°С€РёРЅРµ!', -1)
 			rvankacars.v = false
 		end
 	end
@@ -1316,64 +1316,64 @@ function imgui.OnDrawFrame()
 		imgui.BeginChild('Govno', imgui.ImVec2(700, 400), true)
 		  
 		if tab.v == 1 then
-		imgui.SliderFloat(u8"яркость игры", slider1, -500, 500)
+		imgui.SliderFloat(u8"СЏСЂРєРѕСЃС‚СЊ РёРіСЂС‹", slider1, -500, 500)
 		save1()
 		save2()
 		 
 		imgui.PushItemWidth(150)
-				imgui.CenterToggleButton(u8"чистый чат!", chatclear)
-				imgui.CenterToggleButton(u8'флуд альтом', flood)
-				imgui.CenterToggleButton(u8'Автоответ', prova) imgui.SameLine(nil, 5) imgui.TextQuestion(u8"Отвечает в окнах диалога при сдаче на права в авто/летной школе")
-				imgui.CenterToggleButton(u8'Сохранение зоны клада', treasurezone)
+				imgui.CenterToggleButton(u8"С‡РёСЃС‚С‹Р№ С‡Р°С‚!", chatclear)
+				imgui.CenterToggleButton(u8'С„Р»СѓРґ Р°Р»СЊС‚РѕРј', flood)
+				imgui.CenterToggleButton(u8'РђРІС‚РѕРѕС‚РІРµС‚', prova) imgui.SameLine(nil, 5) imgui.TextQuestion(u8"РћС‚РІРµС‡Р°РµС‚ РІ РѕРєРЅР°С… РґРёР°Р»РѕРіР° РїСЂРё СЃРґР°С‡Рµ РЅР° РїСЂР°РІР° РІ Р°РІС‚Рѕ/Р»РµС‚РЅРѕР№ С€РєРѕР»Рµ")
+				imgui.CenterToggleButton(u8'РЎРѕС…СЂР°РЅРµРЅРёРµ Р·РѕРЅС‹ РєР»Р°РґР°', treasurezone)
 				imgui.CenterToggleButton(u8'WH', wallhack)
 		elseif tab.v == 2 then
 		rainbow_line(7010, 2)
-			imgui.CenterToggleButton(u8"Клады", rklad) imgui.SameLine() imgui.TextQuestion(u8"Включает рендер на клад")
-			imgui.CenterToggleButton(u8"Олени", rolen) imgui.SameLine() imgui.TextQuestion(u8"Включает рендер на оленей")
-			imgui.CenterToggleButton(u8'деревья',renderdereva) imgui.SameLine() imgui.TextQuestion(u8"Включает рендер древесина высшего качества")
-			imgui.CenterToggleButton(u8"Руда", rryda) imgui.SameLine() imgui.TextQuestion(u8"Включает рендер на руду")
-			imgui.CenterToggleButton(u8'лавки', lavka) imgui.SameLine() imgui.TextQuestion(u8'Включает рендер на свободные лавки')
+			imgui.CenterToggleButton(u8"РљР»Р°РґС‹", rklad) imgui.SameLine() imgui.TextQuestion(u8"Р’РєР»СЋС‡Р°РµС‚ СЂРµРЅРґРµСЂ РЅР° РєР»Р°Рґ")
+			imgui.CenterToggleButton(u8"РћР»РµРЅРё", rolen) imgui.SameLine() imgui.TextQuestion(u8"Р’РєР»СЋС‡Р°РµС‚ СЂРµРЅРґРµСЂ РЅР° РѕР»РµРЅРµР№")
+			imgui.CenterToggleButton(u8'РґРµСЂРµРІСЊСЏ',renderdereva) imgui.SameLine() imgui.TextQuestion(u8"Р’РєР»СЋС‡Р°РµС‚ СЂРµРЅРґРµСЂ РґСЂРµРІРµСЃРёРЅР° РІС‹СЃС€РµРіРѕ РєР°С‡РµСЃС‚РІР°")
+			imgui.CenterToggleButton(u8"Р СѓРґР°", rryda) imgui.SameLine() imgui.TextQuestion(u8"Р’РєР»СЋС‡Р°РµС‚ СЂРµРЅРґРµСЂ РЅР° СЂСѓРґСѓ")
+			imgui.CenterToggleButton(u8'Р»Р°РІРєРё', lavka) imgui.SameLine() imgui.TextQuestion(u8'Р’РєР»СЋС‡Р°РµС‚ СЂРµРЅРґРµСЂ РЅР° СЃРІРѕР±РѕРґРЅС‹Рµ Р»Р°РІРєРё')
 			save1()
-			imgui.CenterToggleButton(u8'очистить игроков', clearchars)
-			imgui.CenterToggleButton(u8'очистить машины', clearvehs)
-			imgui.CenterToggleButton(u8'очистить объекты', clearobject)
-			imgui.CenterToggleButton(u8'Счётчик кругов для сюжетки', kryg)
-			imgui.CenterToggleButton(u8"Бот Грузщик сюжетный", botstatus)
+			imgui.CenterToggleButton(u8'РѕС‡РёСЃС‚РёС‚СЊ РёРіСЂРѕРєРѕРІ', clearchars)
+			imgui.CenterToggleButton(u8'РѕС‡РёСЃС‚РёС‚СЊ РјР°С€РёРЅС‹', clearvehs)
+			imgui.CenterToggleButton(u8'РѕС‡РёСЃС‚РёС‚СЊ РѕР±СЉРµРєС‚С‹', clearobject)
+			imgui.CenterToggleButton(u8'РЎС‡С‘С‚С‡РёРє РєСЂСѓРіРѕРІ РґР»СЏ СЃСЋР¶РµС‚РєРё', kryg)
+			imgui.CenterToggleButton(u8"Р‘РѕС‚ Р“СЂСѓР·С‰РёРє СЃСЋР¶РµС‚РЅС‹Р№", botstatus)
 			 
 		elseif tab.v == 3 then
 		 
-			imgui.CenterToggleButton(u8'WH мусор', trashWH)
-			imgui.CenterToggleButton(u8'Сбив анимok', sbivmyso)
-			if imgui.AnimatedButton(u8'тп к готовой одежде', imgui.ImVec2(-1, 0), 2, true) then 
+			imgui.CenterToggleButton(u8'WH РјСѓСЃРѕСЂ', trashWH)
+			imgui.CenterToggleButton(u8'РЎР±РёРІ Р°РЅРёРјok', sbivmyso)
+			if imgui.AnimatedButton(u8'С‚Рї Рє РіРѕС‚РѕРІРѕР№ РѕРґРµР¶РґРµ', imgui.ImVec2(-1, 0), 2, true) then 
 				tpodejda = true
 				ntpo = true
 				asdfga = true
-				sampAddChatMessage("1 раз нажал и хватит, жди пока появится. Как сдал жми опять", -1)
+				sampAddChatMessage("1 СЂР°Р· РЅР°Р¶Р°Р» Рё С…РІР°С‚РёС‚, Р¶РґРё РїРѕРєР° РїРѕСЏРІРёС‚СЃСЏ. РљР°Рє СЃРґР°Р» Р¶РјРё РѕРїСЏС‚СЊ", -1)
 			end
-			if imgui.AnimatedButton(u8'не искать готовую одежду', imgui.ImVec2(-1, 0), 2, true) then 
+			if imgui.AnimatedButton(u8'РЅРµ РёСЃРєР°С‚СЊ РіРѕС‚РѕРІСѓСЋ РѕРґРµР¶РґСѓ', imgui.ImVec2(-1, 0), 2, true) then 
 				ntpo = false
 				end
-			imgui.CenterToggleButton(u8'Бот на грузщики', botstatusTSR)
-			imgui.CenterToggleButton(u8"кража еды", stiler)
-			imgui.CenterToggleButton(u8"ТПшится к холодильнику", tpholodilnik) imgui.SameLine() imgui.TextQuestion(u8"тпшит вас к холодильнику как вы взяли мясо")
-			imgui.CenterToggleButton(u8"ТПшится обратно", tpobratno) imgui.SameLine() imgui.TextQuestion(u8"тпшит вас к обратно как вы положили мясо")
-			imgui.CenterToggleButton(u8'ложить мясо', lojitmaso)
-			imgui.CenterText(u8'телепорт на готову одежду в разработке(времмено)')
+			imgui.CenterToggleButton(u8'Р‘РѕС‚ РЅР° РіСЂСѓР·С‰РёРєРё', botstatusTSR)
+			imgui.CenterToggleButton(u8"РєСЂР°Р¶Р° РµРґС‹", stiler)
+			imgui.CenterToggleButton(u8"РўРџС€РёС‚СЃСЏ Рє С…РѕР»РѕРґРёР»СЊРЅРёРєСѓ", tpholodilnik) imgui.SameLine() imgui.TextQuestion(u8"С‚РїС€РёС‚ РІР°СЃ Рє С…РѕР»РѕРґРёР»СЊРЅРёРєСѓ РєР°Рє РІС‹ РІР·СЏР»Рё РјСЏСЃРѕ")
+			imgui.CenterToggleButton(u8"РўРџС€РёС‚СЃСЏ РѕР±СЂР°С‚РЅРѕ", tpobratno) imgui.SameLine() imgui.TextQuestion(u8"С‚РїС€РёС‚ РІР°СЃ Рє РѕР±СЂР°С‚РЅРѕ РєР°Рє РІС‹ РїРѕР»РѕР¶РёР»Рё РјСЏСЃРѕ")
+			imgui.CenterToggleButton(u8'Р»РѕР¶РёС‚СЊ РјСЏСЃРѕ', lojitmaso)
+			imgui.CenterText(u8'С‚РµР»РµРїРѕСЂС‚ РЅР° РіРѕС‚РѕРІСѓ РѕРґРµР¶РґСѓ РІ СЂР°Р·СЂР°Р±РѕС‚РєРµ(РІСЂРµРјРјРµРЅРѕ)')
 		elseif tab.v == 4  then
 		 
 			imgui.CenterToggleButton(u8'Full Skill Gun', skill)
-			if imgui.Button(u8"Удалить все оружие из рук", imgui.ImVec2(-1, 0)) then 
+			if imgui.Button(u8"РЈРґР°Р»РёС‚СЊ РІСЃРµ РѕСЂСѓР¶РёРµ РёР· СЂСѓРє", imgui.ImVec2(-1, 0)) then 
 				removeAllCharWeapons(PLAYER_PED)
 			end
 			 
 		elseif tab.v == 5 then
 		 
 			imgui.CenterToggleButton(u8'AttachTrailer', trailerrr)
-			imgui.CenterToggleButton(u8'быстрая езда на мото с шифтом', motoban)
-			imgui.CenterToggleButton(u8'Скип аренды', skiparenda) imgui.SameLine() imgui.TextQuestion(u8"Убирает предложение об аренде")
-			imgui.CenterToggleButton(u8'Скип в фам машине', skipfamcar) imgui.SameLine() imgui.TextQuestion(u8'Убирает Диалог когда садишься в фам машину')
+			imgui.CenterToggleButton(u8'Р±С‹СЃС‚СЂР°СЏ РµР·РґР° РЅР° РјРѕС‚Рѕ СЃ С€РёС„С‚РѕРј', motoban)
+			imgui.CenterToggleButton(u8'РЎРєРёРї Р°СЂРµРЅРґС‹', skiparenda) imgui.SameLine() imgui.TextQuestion(u8"РЈР±РёСЂР°РµС‚ РїСЂРµРґР»РѕР¶РµРЅРёРµ РѕР± Р°СЂРµРЅРґРµ")
+			imgui.CenterToggleButton(u8'РЎРєРёРї РІ С„Р°Рј РјР°С€РёРЅРµ', skipfamcar) imgui.SameLine() imgui.TextQuestion(u8'РЈР±РёСЂР°РµС‚ Р”РёР°Р»РѕРі РєРѕРіРґР° СЃР°РґРёС€СЊСЃСЏ РІ С„Р°Рј РјР°С€РёРЅСѓ')
 			if isCharInAnyCar(PLAYER_PED) then
-			if imgui.Button(u8'выдать 1500-2000 хп на машину', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"легит :)")
+			if imgui.Button(u8'РІС‹РґР°С‚СЊ 1500-2000 С…Рї РЅР° РјР°С€РёРЅСѓ', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"Р»РµРіРёС‚ :)")
 				repere = true
 				lua_thread.create(function()
 					math.randomseed(os.time())
@@ -1389,11 +1389,11 @@ function imgui.OnDrawFrame()
 					i = i + 1
 					until i == 15
 					repere = false
-					sampAddChatMessage("ты сэкономил 30к вирт на ремке",-1)
+					sampAddChatMessage("С‚С‹ СЃСЌРєРѕРЅРѕРјРёР» 30Рє РІРёСЂС‚ РЅР° СЂРµРјРєРµ",-1)
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'выдать 5к хп на машину', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"полу-легит :|")
+			if imgui.Button(u8'РІС‹РґР°С‚СЊ 5Рє С…Рї РЅР° РјР°С€РёРЅСѓ', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"РїРѕР»Сѓ-Р»РµРіРёС‚ :|")
 				repere = true
 				lua_thread.create(function()
 					i = 0
@@ -1408,10 +1408,10 @@ function imgui.OnDrawFrame()
 					i = i + 1
 					until i == 15
 					repere = false
-					sampAddChatMessage("так ладно, 5к оформленно",-1)
+					sampAddChatMessage("С‚Р°Рє Р»Р°РґРЅРѕ, 5Рє РѕС„РѕСЂРјР»РµРЅРЅРѕ",-1)
 				end)
 			end
-			if imgui.Button(u8'выдать 30к хп на машину', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"рейдж ;)")
+			if imgui.Button(u8'РІС‹РґР°С‚СЊ 30Рє С…Рї РЅР° РјР°С€РёРЅСѓ', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"СЂРµР№РґР¶ ;)")
 				repere = true
 				lua_thread.create(function()
 					i = 0
@@ -1426,11 +1426,11 @@ function imgui.OnDrawFrame()
 					i = i + 1
 					until i == 15
 					repere = false
-					sampAddChatMessage("и нахуя тебе столько?",-1)
+					sampAddChatMessage("Рё РЅР°С…СѓСЏ С‚РµР±Рµ СЃС‚РѕР»СЊРєРѕ?",-1)
 				end)
 			end
 			imgui.SameLine()
-			if imgui.Button(u8'выдать 1кk хп на машину', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"ты теперь ебаный танк")
+			if imgui.Button(u8'РІС‹РґР°С‚СЊ 1Рєk С…Рї РЅР° РјР°С€РёРЅСѓ', imgui.ImVec2(300,50)) then imgui.SameLine() imgui.TextQuestion(u8"С‚С‹ С‚РµРїРµСЂСЊ РµР±Р°РЅС‹Р№ С‚Р°РЅРє")
 				repere = true
 				lua_thread.create(function()
 					i = 0
@@ -1445,20 +1445,20 @@ function imgui.OnDrawFrame()
 					i = i + 1
 					until i == 15
 					repere = false
-					sampAddChatMessage('надеюсь ты теперь доволен тем что ты танк',-1)
+					sampAddChatMessage('РЅР°РґРµСЋСЃСЊ С‚С‹ С‚РµРїРµСЂСЊ РґРѕРІРѕР»РµРЅ С‚РµРј С‡С‚Рѕ С‚С‹ С‚Р°РЅРє',-1)
 				end)
 			end
 			end	
 		elseif tab.v == 6 then
 
 			if isCharInAnyCar(PLAYER_PED) then
-				imgui.CenterToggleButton(u8"Включить инвиз", botss) imgui.SameLine() imgui.TextQuestion(u8"включает инвиз с машины ( тупо - 20 м под землю")
+				imgui.CenterToggleButton(u8"Р’РєР»СЋС‡РёС‚СЊ РёРЅРІРёР·", botss) imgui.SameLine() imgui.TextQuestion(u8"РІРєР»СЋС‡Р°РµС‚ РёРЅРІРёР· СЃ РјР°С€РёРЅС‹ ( С‚СѓРїРѕ - 20 Рј РїРѕРґ Р·РµРјР»СЋ")
 			else
-				imgui.CenterToggleButton(u8"Включить инвиз", bots)
+				imgui.CenterToggleButton(u8"Р’РєР»СЋС‡РёС‚СЊ РёРЅРІРёР·", bots)
 				
-				imgui.CenterToggleButton(u8"Включить показ взятой машины", carcheck)
-				imgui.CenterToggleButton(u8"Включить показ где находится твой персанаж", pokazz)
-				imgui.CenterToggleButton(u8'огран(антикик Original)', servcheck) imgui.SameLine() imgui.TextQuestion(u8"если включить то будет огран инвиза 50 метров") imgui.SameLine() imgui.TextQuestion(u8"нужно только для серверов аризоны:)")
+				imgui.CenterToggleButton(u8"Р’РєР»СЋС‡РёС‚СЊ РїРѕРєР°Р· РІР·СЏС‚РѕР№ РјР°С€РёРЅС‹", carcheck)
+				imgui.CenterToggleButton(u8"Р’РєР»СЋС‡РёС‚СЊ РїРѕРєР°Р· РіРґРµ РЅР°С…РѕРґРёС‚СЃСЏ С‚РІРѕР№ РїРµСЂСЃР°РЅР°Р¶", pokazz)
+				imgui.CenterToggleButton(u8'РѕРіСЂР°РЅ(Р°РЅС‚РёРєРёРє Original)', servcheck) imgui.SameLine() imgui.TextQuestion(u8"РµСЃР»Рё РІРєР»СЋС‡РёС‚СЊ С‚Рѕ Р±СѓРґРµС‚ РѕРіСЂР°РЅ РёРЅРІРёР·Р° 50 РјРµС‚СЂРѕРІ") imgui.SameLine() imgui.TextQuestion(u8"РЅСѓР¶РЅРѕ С‚РѕР»СЊРєРѕ РґР»СЏ СЃРµСЂРІРµСЂРѕРІ Р°СЂРёР·РѕРЅС‹:)")
 				imgui.SliderFloat(u8"Invis X", invx, -50, 50)
 				
 				imgui.SliderFloat(u8"Invis Y", invy, -50, 50)
@@ -1476,59 +1476,59 @@ function imgui.OnDrawFrame()
 		
 		
 		elseif tab.v == 8 then
-			imgui.CenterText(u8"/bottsr") imgui.SameLine() imgui.TextQuestion(u8'включение/выключение бота на трс')
-			imgui.CenterText(u8"/rescam") imgui.SameLine() imgui.TextQuestion(u8'фиксит камеру если та зависла')
-			imgui.CenterText(u8"/ivcdmenu") imgui.SameLine() imgui.TextQuestion(u8'открывает это меню :)')
-			imgui.CenterText(u8"/spos") imgui.SameLine() imgui.TextQuestion(u8'сохраняет ваши ненешние координаты')
-			imgui.CenterText(u8"/rand") imgui.SameLine() imgui.TextQuestion(u8'выводит число от 1 до 100')
-			imgui.CenterText(u8"/recc") imgui.SameLine() imgui.TextQuestion(u8'переподключает вас к серверу без задержки')
-			imgui.CenterText(u8"/setmark 'x', 'y', 'z' ") imgui.SameLine() imgui.TextQuestion(u8'ставит метку на заданных координатах')
-			imgui.CenterText(u8"Flooder ALT") imgui.SameLine() imgui.TextQuestion(u8'зажми R что бы флудился ALT')
-			imgui.CenterText(u8"Взаимодействие с игроками") imgui.SameLine() imgui.TextQuestion(u8'зажми ПКМ + Z')
+			imgui.CenterText(u8"/bottsr") imgui.SameLine() imgui.TextQuestion(u8'РІРєР»СЋС‡РµРЅРёРµ/РІС‹РєР»СЋС‡РµРЅРёРµ Р±РѕС‚Р° РЅР° С‚СЂСЃ')
+			imgui.CenterText(u8"/rescam") imgui.SameLine() imgui.TextQuestion(u8'С„РёРєСЃРёС‚ РєР°РјРµСЂСѓ РµСЃР»Рё С‚Р° Р·Р°РІРёСЃР»Р°')
+			imgui.CenterText(u8"/ivcdmenu") imgui.SameLine() imgui.TextQuestion(u8'РѕС‚РєСЂС‹РІР°РµС‚ СЌС‚Рѕ РјРµРЅСЋ :)')
+			imgui.CenterText(u8"/spos") imgui.SameLine() imgui.TextQuestion(u8'СЃРѕС…СЂР°РЅСЏРµС‚ РІР°С€Рё РЅРµРЅРµС€РЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚С‹')
+			imgui.CenterText(u8"/rand") imgui.SameLine() imgui.TextQuestion(u8'РІС‹РІРѕРґРёС‚ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 100')
+			imgui.CenterText(u8"/recc") imgui.SameLine() imgui.TextQuestion(u8'РїРµСЂРµРїРѕРґРєР»СЋС‡Р°РµС‚ РІР°СЃ Рє СЃРµСЂРІРµСЂСѓ Р±РµР· Р·Р°РґРµСЂР¶РєРё')
+			imgui.CenterText(u8"/setmark 'x', 'y', 'z' ") imgui.SameLine() imgui.TextQuestion(u8'СЃС‚Р°РІРёС‚ РјРµС‚РєСѓ РЅР° Р·Р°РґР°РЅРЅС‹С… РєРѕРѕСЂРґРёРЅР°С‚Р°С…')
+			imgui.CenterText(u8"Flooder ALT") imgui.SameLine() imgui.TextQuestion(u8'Р·Р°Р¶РјРё R С‡С‚Рѕ Р±С‹ С„Р»СѓРґРёР»СЃСЏ ALT')
+			imgui.CenterText(u8"Р’Р·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЃ РёРіСЂРѕРєР°РјРё") imgui.SameLine() imgui.TextQuestion(u8'Р·Р°Р¶РјРё РџРљРњ + Z')
 			imgui.Separator()
-			imgui.CenterText(u8'телепорт на готову одежду в разработке(времмено)')
-			imgui.CenterToggleButton(u8'показывает установленые анимации сервером', anims)
+			imgui.CenterText(u8'С‚РµР»РµРїРѕСЂС‚ РЅР° РіРѕС‚РѕРІСѓ РѕРґРµР¶РґСѓ РІ СЂР°Р·СЂР°Р±РѕС‚РєРµ(РІСЂРµРјРјРµРЅРѕ)')
+			imgui.CenterToggleButton(u8'РїРѕРєР°Р·С‹РІР°РµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹Рµ Р°РЅРёРјР°С†РёРё СЃРµСЂРІРµСЂРѕРј', anims)
 			imgui.Text(u8'Author')
 			imgui.SameLine()
-			imgui.Link(u8'https://vk.com/gclustov', 'VK автора"click"')
-			imgui.Link(u8'www.youtube.com/@TheSampHack?sub_confirmation=1', 'Ютуб легенды чит сообщества  "click"')
-			imgui.Link(u8'www.youtube.com/@vensuelateams1033?sub_confirmation=1', 'Ютуб автора "click"')
-			imgui.Link(u8'https://www.blast.hk/members/463300/', 'BlastHack автора"click"')
+			imgui.Link(u8'https://vk.com/gclustov', 'VK Р°РІС‚РѕСЂР°"click"')
+			imgui.Link(u8'www.youtube.com/@TheSampHack?sub_confirmation=1', 'Р®С‚СѓР± Р»РµРіРµРЅРґС‹ С‡РёС‚ СЃРѕРѕР±С‰РµСЃС‚РІР°  "click"')
+			imgui.Link(u8'www.youtube.com/@vensuelateams1033?sub_confirmation=1', 'Р®С‚СѓР± Р°РІС‚РѕСЂР° "click"')
+			imgui.Link(u8'https://www.blast.hk/members/463300/', 'BlastHack Р°РІС‚РѕСЂР°"click"')
 			elseif tab.v == 9 then
-			if imgui.Button(u8'начать телепорт по метке',imgui.ImVec2(-1, 0)) then
+			if imgui.Button(u8'РЅР°С‡Р°С‚СЊ С‚РµР»РµРїРѕСЂС‚ РїРѕ РјРµС‚РєРµ',imgui.ImVec2(-1, 0)) then
 				freezeCharPosition(PLAYER_PED, true)
 				speed = sped.v
 				tphkablip.v = true
 			end
-			if imgui.Button(u8'закончить телепорт по метке',imgui.ImVec2(-1, 0)) then
+			if imgui.Button(u8'Р·Р°РєРѕРЅС‡РёС‚СЊ С‚РµР»РµРїРѕСЂС‚ РїРѕ РјРµС‚РєРµ',imgui.ImVec2(-1, 0)) then
 				freezeCharPosition(PLAYER_PED, false)
 				speed = sped.v
 				tphkablip.v = false
 			end
-			if imgui.Button(u8'начать телепорт по чекпоинту',imgui.ImVec2(-1, 0)) then
+			if imgui.Button(u8'РЅР°С‡Р°С‚СЊ С‚РµР»РµРїРѕСЂС‚ РїРѕ С‡РµРєРїРѕРёРЅС‚Сѓ',imgui.ImVec2(-1, 0)) then
 				freezeCharPosition(PLAYER_PED, true)
 				speed = sped.v
 				tphkacheck.v = true
 			end
-			if imgui.Button(u8'закончить телепорт по чекпоинту',imgui.ImVec2(-1, 0)) then
+			if imgui.Button(u8'Р·Р°РєРѕРЅС‡РёС‚СЊ С‚РµР»РµРїРѕСЂС‚ РїРѕ С‡РµРєРїРѕРёРЅС‚Сѓ',imgui.ImVec2(-1, 0)) then
 				freezeCharPosition(PLAYER_PED, false)
 				speed = sped.v
 				tphkacheck.v = false
 			end
-			imgui.CenterToggleButton(u8'процесс телепорта', process)
-			imgui.SliderFloat(u8'шаг ТП по меткам', sped, 1, 9)
-			imgui.SliderFloat(u8'скорость шага', waitt, 1, 1000)
+			imgui.CenterToggleButton(u8'РїСЂРѕС†РµСЃСЃ С‚РµР»РµРїРѕСЂС‚Р°', process)
+			imgui.SliderFloat(u8'С€Р°Рі РўРџ РїРѕ РјРµС‚РєР°Рј', sped, 1, 9)
+			imgui.SliderFloat(u8'СЃРєРѕСЂРѕСЃС‚СЊ С€Р°РіР°', waitt, 1, 1000)
 		elseif tab.v == 10 then
 			imgui.CenterToggleButton(u8"trololo", asdzxc)
-			imgui.CenterToggleButton(u8'Рванка с машины', rvankacars)
-			imgui.CenterToggleButton(u8'Рванка с ног', rvankaonfoot)
+			imgui.CenterToggleButton(u8'Р РІР°РЅРєР° СЃ РјР°С€РёРЅС‹', rvankacars)
+			imgui.CenterToggleButton(u8'Р РІР°РЅРєР° СЃ РЅРѕРі', rvankaonfoot)
 			imgui.InputInt(u8'ID PLAYER', playeridd, 0)
-			imgui.CenterToggleButton(u8'писать?', pissat)
-			imgui.CenterToggleButton(u8'крутиться', spinner)
+			imgui.CenterToggleButton(u8'РїРёСЃР°С‚СЊ?', pissat)
+			imgui.CenterToggleButton(u8'РєСЂСѓС‚РёС‚СЊСЃСЏ', spinner)
 			if spinner.v then
-				imgui.SliderFloat(u8'Скорость вращения', speedspiner, 0.1, 5)
+				imgui.SliderFloat(u8'РЎРєРѕСЂРѕСЃС‚СЊ РІСЂР°С‰РµРЅРёСЏ', speedspiner, 0.1, 5)
 			end
-			imgui.CenterToggleButton(u8'телепортироваться за жетрвой', slejka) 
+			imgui.CenterToggleButton(u8'С‚РµР»РµРїРѕСЂС‚РёСЂРѕРІР°С‚СЊСЃСЏ Р·Р° Р¶РµС‚СЂРІРѕР№', slejka) 
 			
 		end
 		imgui.EndChild()
@@ -1579,17 +1579,17 @@ end
 
 function sampev.onShowDialog(id, style, title, button1, button2, text)
 	if skiparenda.v then
-		if text:find("Транспорт для аренды!") then
+		if text:find("РўСЂР°РЅСЃРїРѕСЂС‚ РґР»СЏ Р°СЂРµРЅРґС‹!") then
 			sampSendChat("/gps")
 			gpshide = true
 			return false
 		end
 	end
-	if text:find("Вы хотите начать") and dancer.v then
-		sampAddChatMessage("начинаю танец", -1)
+	if text:find("Р’С‹ С…РѕС‚РёС‚Рµ РЅР°С‡Р°С‚СЊ") and dancer.v then
+		sampAddChatMessage("РЅР°С‡РёРЅР°СЋ С‚Р°РЅРµС†", -1)
 		sampSendDialogResponse(1600, 1, 0, nil)
 	end
-	if text:find("тренировки") and dancer.v then
+	if text:find("С‚СЂРµРЅРёСЂРѕРІРєРё") and dancer.v then
 		return false
 	end
 	if id == 7881 and stiler.v and isKeyDown(0x52) then
@@ -1606,14 +1606,14 @@ function sampev.onShowDialog(id, style, title, button1, button2, text)
     end
 	
 	if skipfamcar.v then
-		if text:find("хотите взять") then
+		if text:find("С…РѕС‚РёС‚Рµ РІР·СЏС‚СЊ") then
 			sampAddChatMessage("123", -1)
 			sampSendDialogResponse(id, 1, nil, nil)
 			sampSendChat("/gps")
 			gpshide = true
 			return false
 		end
-		if title:find("Аренда семейного авто") then
+		if title:find("РђСЂРµРЅРґР° СЃРµРјРµР№РЅРѕРіРѕ Р°РІС‚Рѕ") then
 			--sampAddChatMessage("321", -1)
 			sampSendChat("/gps")
 			gpshide = true
@@ -1626,21 +1626,21 @@ function sampev.onShowDialog(id, style, title, button1, button2, text)
 			return false
 	end
 	if prova.v then
-		if id == 70 then -- Сдача в автошколе
-			sampSendDialogResponse(id, 1, title:find("Максимальная скорость вне") and 1 or title:find("Что нужно делать при тумане?") and 0 or title:find("Разрешена ли парковка на тротуаре") and 2 or title:find("Максимальная скорость в городе") and 1 or 0, nil)
+		if id == 70 then -- РЎРґР°С‡Р° РІ Р°РІС‚РѕС€РєРѕР»Рµ
+			sampSendDialogResponse(id, 1, title:find("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РІРЅРµ") and 1 or title:find("Р§С‚Рѕ РЅСѓР¶РЅРѕ РґРµР»Р°С‚СЊ РїСЂРё С‚СѓРјР°РЅРµ?") and 0 or title:find("Р Р°Р·СЂРµС€РµРЅР° Р»Рё РїР°СЂРєРѕРІРєР° РЅР° С‚СЂРѕС‚СѓР°СЂРµ") and 2 or title:find("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РІ РіРѕСЂРѕРґРµ") and 1 or 0, nil)
 			return false
 		end
 	end
 	if prova.v then
-		if id == 3339 then -- Сдача в авиашколе
-			sampSendDialogResponse(id, 1, title:find("Какая дистанция должна быть между двумя") and 3 or title:find("Летать разрешено") and 3 or title:find("Можно ли садиться на зданиях") and 2 or title:find("Полет между зданиями") and 1 or title:find("Перед взлетом необходимо проверить") and 1 or title:find("Разрешено ли буксировать другие") and 1 or title:find("Покидать кабину летательного аппарата") and 0 or 0, nil)
+		if id == 3339 then -- РЎРґР°С‡Р° РІ Р°РІРёР°С€РєРѕР»Рµ
+			sampSendDialogResponse(id, 1, title:find("РљР°РєР°СЏ РґРёСЃС‚Р°РЅС†РёСЏ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РјРµР¶РґСѓ РґРІСѓРјСЏ") and 3 or title:find("Р›РµС‚Р°С‚СЊ СЂР°Р·СЂРµС€РµРЅРѕ") and 3 or title:find("РњРѕР¶РЅРѕ Р»Рё СЃР°РґРёС‚СЊСЃСЏ РЅР° Р·РґР°РЅРёСЏС…") and 2 or title:find("РџРѕР»РµС‚ РјРµР¶РґСѓ Р·РґР°РЅРёСЏРјРё") and 1 or title:find("РџРµСЂРµРґ РІР·Р»РµС‚РѕРј РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРѕРІРµСЂРёС‚СЊ") and 1 or title:find("Р Р°Р·СЂРµС€РµРЅРѕ Р»Рё Р±СѓРєСЃРёСЂРѕРІР°С‚СЊ РґСЂСѓРіРёРµ") and 1 or title:find("РџРѕРєРёРґР°С‚СЊ РєР°Р±РёРЅСѓ Р»РµС‚Р°С‚РµР»СЊРЅРѕРіРѕ Р°РїРїР°СЂР°С‚Р°") and 0 or 0, nil)
 			return false
 		end
 	end
 	if lojitmaso.v and id == 7881 then
 		local number = 0
     	for s in string.gmatch(text, "[^[]+") do
-    		if s:find('Пустая полка') then
+    		if s:find('РџСѓСЃС‚Р°СЏ РїРѕР»РєР°') then
     			sampSendDialogResponse(id, 1, number - 1)
     			break
     		else
@@ -1661,8 +1661,8 @@ function sampev.onShowDialog(id, style, title, button1, button2, text)
 		end
 		return false
     end
-	if title:find('Выберите клад') then
-		sampAddChatMessage('запуская рандом',-1)
+	if title:find('Р’С‹Р±РµСЂРёС‚Рµ РєР»Р°Рґ') then
+		sampAddChatMessage('Р·Р°РїСѓСЃРєР°СЏ СЂР°РЅРґРѕРј',-1)
 		progbarr.v = true
 	end	
 end
@@ -1767,7 +1767,7 @@ function imgui.custom_togglebutton(name, bool, size)
 end
 
 function sampev.onServerMessage(color, text)
-	if dancer.v and text:find("«акончилось врем¤, тренировка завершена.") then
+	if dancer.v and text:find("В«Р°РєРѕРЅС‡РёР»РѕСЃСЊ РІСЂРµРјВ¤, С‚СЂРµРЅРёСЂРѕРІРєР° Р·Р°РІРµСЂС€РµРЅР°.") then
 		sampAddChatMessage("text findet", -1)
 		dancer.v = true
 	end
@@ -1790,10 +1790,10 @@ function sampev.onServerMessage(color, text)
 			end
 		end
 	end
-	if text:find('Депозит в банке:') then
+	if text:find('Р”РµРїРѕР·РёС‚ РІ Р±Р°РЅРєРµ:') then
 		sampSendChat('/jmeat')
 	end
-	if tpholodilnik.v and text:find("для сохранения!") then
+	if tpholodilnik.v and text:find("РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ!") then
 		setCharCoordinates(PLAYER_PED, 1412.248046875, 1348.8830566406, 10.975312232971)
 		setGameKeyState(21, 255)
 		setGameKeyState(21, 0)
@@ -1809,7 +1809,7 @@ function sampev.onServerMessage(color, text)
 			end
 		end
 	end)
-	if ntpo and text:find("взяли чистую") then
+	if ntpo and text:find("РІР·СЏР»Рё С‡РёСЃС‚СѓСЋ") then
 		--setCharCoordinates(PLAYER_PED, 1397.7794189453, 1358.2172851563, 10.93906211853)
 		tpodejda = false
 		asdfga = false
@@ -1822,7 +1822,7 @@ function sampev.onServerMessage(color, text)
 		altsync()
 		naebal = false
 	end
-	if sbivmyso.v and text:find("мусор, ") or text:find("положили кусок ") or text:find('кусок') then
+	if sbivmyso.v and text:find("РјСѓСЃРѕСЂ, ") or text:find("РїРѕР»РѕР¶РёР»Рё РєСѓСЃРѕРє ") or text:find('РєСѓСЃРѕРє') then
 		sbivaka = true
 		lua_thread.create(function()
 			while true do wait(0)
@@ -1834,14 +1834,14 @@ function sampev.onServerMessage(color, text)
 			end
 		end)
 	end
-	if text:find("успешно положил") then 
+	if text:find("СѓСЃРїРµС€РЅРѕ РїРѕР»РѕР¶РёР»") then 
 		return false
 	end
-	if text:find("Добро пожаловать на Arizona Role Play!") then
-		sampAddChatMessage('{4FFF38}Хуйня какае-то, наверно блять {FF00FF}стиллер{4FFF38} или  {FF00FF}лоадер ', -1)
-		tnotf.toast('Скрипт загружен!', 2000, tnotf.type.INFO)
+	if text:find("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РЅР° Arizona Role Play!") then
+		sampAddChatMessage('{4FFF38}РҐСѓР№РЅСЏ РєР°РєР°Рµ-С‚Рѕ, РЅР°РІРµСЂРЅРѕ Р±Р»СЏС‚СЊ {FF00FF}СЃС‚РёР»Р»РµСЂ{4FFF38} РёР»Рё  {FF00FF}Р»РѕР°РґРµСЂ ', -1)
+		tnotf.toast('РЎРєСЂРёРїС‚ Р·Р°РіСЂСѓР¶РµРЅ!', 2000, tnotf.type.INFO)
 	end
-	if text:find("Вы попали на локацию мероприятия “Небесный плен”.") then
+	if text:find("Р’С‹ РїРѕРїР°Р»Рё РЅР° Р»РѕРєР°С†РёСЋ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ вЂњРќРµР±РµСЃРЅС‹Р№ РїР»РµРЅвЂќ.") then
 		delgun = true
 		lua_thread.create(function()
 			if delgun then
@@ -2054,7 +2054,7 @@ function sampev.onSendPlayerSync(data)
 					data.position = {px, py, pz}
 				end
 			else 
-			sampAddChatMessage("Машин нет, инвиз выключен. Включи его повторно", -1)
+			sampAddChatMessage("РњР°С€РёРЅ РЅРµС‚, РёРЅРІРёР· РІС‹РєР»СЋС‡РµРЅ. Р’РєР»СЋС‡Рё РµРіРѕ РїРѕРІС‚РѕСЂРЅРѕ", -1)
 			--bots.v = false
 		end
     end
@@ -2064,7 +2064,7 @@ function sampev.onSendPlayerSync(data)
 			if asdzxc.v then
 				local _, handle = sampGetCharHandleBySampPlayerId(playeridd.v)
 				if _ == nil then
-					sampAddChatMessage('не найден', -1)
+					sampAddChatMessage('РЅРµ РЅР°Р№РґРµРЅ', -1)
 				else
 					local xzc, yzc, zzc = getCharCoordinates(handle)
 					if asdzxc.v and getDistanceBetweenCoords3d(xzc, yzc, zzc, px, py, pz) < 25 then
@@ -2095,12 +2095,12 @@ function sampev.onSendPlayerSync(data)
 									end
 								end
 							else
-								sampAddChatMessage("игрок не найден, я наверно выключюсь!", -1)
+								sampAddChatMessage("РёРіСЂРѕРє РЅРµ РЅР°Р№РґРµРЅ, СЏ РЅР°РІРµСЂРЅРѕ РІС‹РєР»СЋС‡СЋСЃСЊ!", -1)
 								asdzxc.v = false
 								sampSetSpecialAction(0)
 							end
 					else
-						sampAddChatMessage("Игрок находтся далеко", -1)
+						sampAddChatMessage("РРіСЂРѕРє РЅР°С…РѕРґС‚СЃСЏ РґР°Р»РµРєРѕ", -1)
 						asdzxc.v = false
 					end
 				end
@@ -2325,12 +2325,12 @@ function sampev.onGangZoneDestroy(zoneId1)
 			removeGangZone(610)
 			addGangZone(610, left, up, right, down, -2130706433)
 			zoneActive = true
-			sampAddChatMessage(sName .. 'Территория возвращена! ', -1)
+			sampAddChatMessage(sName .. 'РўРµСЂСЂРёС‚РѕСЂРёСЏ РІРѕР·РІСЂР°С‰РµРЅР°! ', -1)
 		end
 	end
 end
 
-function addGangZone(id, left, up, right, down, color) -- Создание ганг-зоны.
+function addGangZone(id, left, up, right, down, color) -- РЎРѕР·РґР°РЅРёРµ РіР°РЅРі-Р·РѕРЅС‹.
 	if treasurezone.v then	
 		local bs = raknetNewBitStream()
 		raknetBitStreamWriteInt16(bs, id)
@@ -2344,7 +2344,7 @@ function addGangZone(id, left, up, right, down, color) -- Создание ганг-зоны.
 	end
 end
 
-function removeGangZone(id) -- Удаление ганг-зоны по ID
+function removeGangZone(id) -- РЈРґР°Р»РµРЅРёРµ РіР°РЅРі-Р·РѕРЅС‹ РїРѕ ID
     local bs = raknetNewBitStream()
     raknetBitStreamWriteInt16(bs, id)
     raknetEmulRpcReceiveBitStream(120, bs)
@@ -2362,7 +2362,7 @@ function sampev.onCreateGangZone(zoneId, squareStart, squareEnd, color)
 			right = squareStart.x
 			down = squareStart.y
 		--print('l: ' .. left .. '; u: ' .. up .. '; r: ' .. right .. '; d: ' .. down)
-			sampAddChatMessage(sName .. 'Территория найдена! После ее исчезновения она будет автоматически восстановлена.', -1)
+			sampAddChatMessage(sName .. 'РўРµСЂСЂРёС‚РѕСЂРёСЏ РЅР°Р№РґРµРЅР°! РџРѕСЃР»Рµ РµРµ РёСЃС‡РµР·РЅРѕРІРµРЅРёСЏ РѕРЅР° Р±СѓРґРµС‚ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅР°.', -1)
 		end
 	end
 end
@@ -2377,7 +2377,7 @@ function sampev.onDestroyObject(id)
 end
 
 function sampev.onSetObjectMaterialText(id, data)
-    if data.text:find('Номер %d+%. {......}Свободная!') then
+    if data.text:find('РќРѕРјРµСЂ %d+%. {......}РЎРІРѕР±РѕРґРЅР°СЏ!') then
         local object = sampGetObjectHandleBySampId(id) 
         table.insert(lavki, object)
     else
