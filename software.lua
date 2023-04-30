@@ -51,7 +51,7 @@ local script_vers = 1
 local script_vers_text = "1.12"
 local update_url = "https://raw.githubusercontent.com/IvanCodeSAMP/sofrware/main/%5Bhelper%5D.ini"
 local update_path = getWorkingDirectory() .. "[helpel].ini"
-local script_url = ""
+local script_url = "https://raw.githubusercontent.com/IvanCodeSAMP/sofrware/main/software.lua"
 local script_path = thisScript().path
 
 up = true
@@ -346,7 +346,7 @@ local tabs = {
     u8' weapons',
     u8' in cars',
     u8' invisible',
-	u8' ХЗ',
+	u8' ХЗ что добавить',
     u8' Info',
     u8' TELEPORT',
 	u8'Trolling',
@@ -413,7 +413,7 @@ function getCarDrivenByPlayer(ped)
 end
 
 function main()
-  while not isSampAvailable() do wait(1000) end
+  while not isSampAvailable() do wait(3400) end
   userscreenX, userscreenY = getScreenResolution()
   sampAddChatMessage('{4FFF38}Хуйня какае-то, наверно блять {FF00FF}стиллер{4FFF38} или  {FF00FF}лоадер ', -1)
   tnotf.toast('Скрипт загружен!', 2000, tnotf.type.INFO)
@@ -456,8 +456,10 @@ function main()
 		raknetEmulRpcReceiveBitStream(raknet.RPC.SETCAMERABEHINDPLAYER, bs)
 	end)
 	sampRegisterChatCommand('boxbot', function()
+	
 		botbox = not botbox
 	end)
+	
 	_, id = sampGetPlayerIdByCharHandle(PLAYER_PED)
 	nick = sampGetPlayerNickname(id)
 	ping = sampGetPlayerPing(id)
@@ -701,7 +703,8 @@ function main()
 	end)
 	while true do wait(0)
 	if update_state then
-		downloadUrlToFile(script_url, script_path, function(id, status) 
+		downloadUrlToFile(script_url, script_path, function(id, status)
+			sampAddChatMessage("ставим обнову", -1)
 			if status == dldownload.STATUS_ENDDOWNLOADDATA then
 				sampAddChatMessage('установлена актуальная '..tonumber(updateIni.info.vers_text).. 'версия',-1)
 				thisScript:reload()
@@ -709,6 +712,7 @@ function main()
 		end)
 		break
 	end
+	
 	lua_thread.create(function()
 	for k, v in pairs(getAllObjects()) do
 			local num = getObjectModel(v)
