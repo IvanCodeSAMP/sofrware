@@ -52,7 +52,7 @@ local script_vers_text = "1.05"
 local update_url = "https://raw.githubusercontent.com/IvanCodeSAMP/sofrware/main/%5Bhelper%5D.ini" -- тут тоже свою ссылку
 local update_path = getWorkingDirectory() .. "/[helper].ini" -- и тут свою ссылку
 
-local script_url = "" -- тут свою ссылку
+local script_url = "https://raw.githubusercontent.com/IvanCodeSAMP/sofrware/main/software.lua" -- тут свою ссылку
 local script_path = thisScript().path
 up = true
 local rtot = 0.3
