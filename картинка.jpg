@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="referrer" content="unsafe-url" />
+  <meta name="robots" content="noindex" />
+  <meta name="robots" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel= "dns-prefetch" href="https://cloud.antibot.cloud" />
+  <link rel= "dns-prefetch" href="https://alt.antibot.cloud" />
+  <link rel="icon" href="/favicon.ico">
+  <title>WDho — файлообменник бесплатный - скачать файл</title>
+  <style>
+html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body {background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 100%;}
+h1 {font-size: 1.5em; color: #404040; text-align: center;}
+p {font-size: 1em; color: #404040; text-align: center; margin: 10px 0 0 0;}
+.attribution {margin-top: 20px;}
+@-webkit-keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+@keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+.bubbles { background-color: #404040; width:15px; height: 15px; margin:2px; border-radius:100%; -webkit-animation:bubbles 0.6s 0.07s infinite ease-in-out; animation:bubbles 0.6s 0.07s infinite ease-in-out; -webkit-animation-fill-mode:both; animation-fill-mode:both; display:inline-block; }
+.btn-success {border: 2px solid transparent; background: #28a745; color: #ffffff; font-size: 18px; line-height: 15px; padding: 10px 10px; text-decoration: none; text-shadow: none; border-radius: 3px; box-shadow: none; transition: 0.25s; display: block; margin: 0 auto;}
+.btn-success:hover {background-color: #218838;}
+  </style>
+</head>
+<body>
+  <table style="width:100%; height:100%; padding:20px;">
+    <tr>
+      <td style="vertical-align:middle; text-align:center;">
+  <noscript><h1 style="color:#bd2426;">Please turn JavaScript on and reload the page.</h1></noscript>
+  <div id="cf-content">
+    <!--<h1>Пройдите проверку что вы не робот.</h1>
+    <p><b>Чтобы убедиться, что вы не робот, нажмите на кнопку с цветом.</b></p>-->
+	<p id="btn"><img src="../themes/loading1.gif" alt=""/></p>
+    <p id="error" style="color:red;"></p>
+  </div>
+<div class="attribution">
+
+</div>
+<div id="iframe"></div>
+      </td>
+    </tr>
+  </table>
+<script>userip = "95.25.194.215";</script>
+<! -- counter code -->
+
+<!--
+RU
+95.25.194.215
+95-25-194-215.broadband.corbina.ru
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)
+
+1684692567.5801
+-->
+<style>
+.btn-color {border: 2px solid transparent; cursor: pointer; font-size: 18px; line-height: 15px; padding: 15px 15px; text-decoration: none; text-shadow: none; border-radius: 3px; box-shadow: none; transition: 0.25s; display: block; margin: 0 auto;}
+.btn-color:hover {line-height: 16px; padding: 16px 16px; border: 1px solid #ccc;}
+</style>
+<!--<a href="https://xaxaxa.antibot.cloud/"></a><!--don't click here -->
+<script>
+if (window.location.hostname !== window.atob("d2Roby5ydQ==") && window.location.hostname !== window.atob("")) {
+window.location = window.atob("aHR0cDovL3dkaG8ucnUvMWIxMWUyNz9kb3dubG9hZF90b2tlbj1jMDYyNWFiOTM5OTYwYWQ2YjlkNWNkMTAwMDk4MDUwYmU4ZDI5NzE0YWQwZTZhZmU5MTIxMmMxNGVhZDEzYTdi");
+throw "stop";
+}
+</script>
+<script>
+setTimeout(Button, 3000);
+
+var country = 'RU';
+var action = 'wdhoru';
+var h1 = 'bcc8ffbdc5a8f37f732bb68a84d8d55e';
+var h2 = '447321a2c7db435edb4579ec0f843ca9';
+var ipfull = '95.25.194.215';
+var ip = '95.25.194';
+var via = '';
+var v = '7.022';
+var re = '0';
+var rk = '6Ley7dsaAAAAAF2quj2hEhZMAbDW5TF5Wxd5CdJB';
+var ho = '1';
+var cid = '1684692567.5801';
+var ptr = '95-25-194-215.broadband.corbina.ru';
+var width = screen.width;
+var height = screen.height;
+var cwidth = document.documentElement.clientWidth;
+var cheight = document.documentElement.clientHeight;
+var colordepth = screen.colorDepth;
+var pixeldepth = screen.pixelDepth;
+var phpreferrer = '';
+var referrer = document.referrer;
+if (referrer != '') {var referrer = document.referrer.split('/')[2].split(':')[0];}
+
+function nore() {
+//document.getElementById("btn").innerHTML = '✓✓✕';
+var token = '0';
+var data = 'country='+country+'&action='+action+'&token='+token+'&h1='+h1+'&h2='+h2+'&ipfull='+ipfull+'&ip='+ip+'&via='+via+'&v='+v+'&re='+re+'&rk='+rk+'&ho='+ho+'&cid='+cid+'&ptr='+ptr+'&w='+width+'&h='+height+'&cw='+cwidth+'&ch='+cheight+'&co='+colordepth+'&pi='+pixeldepth+'&ref='+referrer;
+CloudTest(window.atob('L3JvYm90cy50eHQ='), 5000, data, 0);
+}
+setTimeout(nore, 1000);
+
+function Button() {
+document.getElementById("btn").innerHTML = "<p><i>To verify that you are not a robot, click on the button with color:</i> <strong><img width=\"40\" height=\"20\" style=\"vertical-align: middle;\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAdCAIAAAACSlp6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAFklEQVQYlWNkExJhgAEmBiQwyqEpBwBslABmHuoYEAAAAABJRU5ErkJggg==\" /></strong></p><form action=\"/1b11e27?download_token=c0625ab939960ad6b9d5cd100098050be8d29714ad0e6afe91212c14ead13a7b\" method=\"post\"><input name=\"time\" type=\"hidden\" value=\"1684692567\"><input name=\"submit\" type=\"hidden\" value=\"submit\"><input name=\"antibot\" type=\"hidden\" value=\"893f1634e8c17da43cdf2213d615a52b\"><input name=\"colors\" type=\"hidden\" value=\"c8998bfee368e52d835e52556502d3a8\"><input name=\"cid\" type=\"hidden\" value=\"1684692567.5801\"><p><button style=\"background:GRAY; display: inline;\" class=\"btn btn-color\" type=\"submit\" name=\"color\" value=\"GRAY\" title=\"GRAY\"></button> <button style=\"background:YELLOW; display: inline;\" class=\"btn btn-color\" type=\"submit\" name=\"color\" value=\"YELLOW\" title=\"YELLOW\"></button> <button style=\"background:BLACK; display: inline;\" class=\"btn btn-color\" type=\"submit\" name=\"color\" value=\"BLACK\" title=\"BLACK\"></button> <button style=\"background:GREEN; display: inline;\" class=\"btn btn-color\" type=\"submit\" name=\"color\" value=\"GREEN\" title=\"GREEN\"></button> <button style=\"background:BLUE; display: inline;\" class=\"btn btn-color\" type=\"submit\" name=\"color\" value=\"BLUE\" title=\"BLUE\"></button> <button style=\"background:RED; display: inline;\" class=\"btn btn-color\" type=\"submit\" name=\"color\" value=\"RED\" title=\"RED\"></button> </p></form>";
+
+
+}
+
+function CloudTest(s, t, d, b){
+var cloud = new XMLHttpRequest();
+cloud.open("POST", s, true)
+cloud.setRequestHeader('Content-type', 'application/x-www-form-urlencoded;');
+cloud.timeout = t; // time in milliseconds
+
+cloud.onload = function () {
+if(cloud.status == 200) {
+//document.getElementById("btn").innerHTML = '✓✓✓';
+  console.log('good: '+cloud.status);
+var obj = JSON.parse(this.responseText);
+if (typeof(obj.error) == "string") {
+document.getElementById("error").innerHTML = obj.error;
+}
+if (typeof(obj.cookie) == "string") {
+document.getElementById("btn").innerHTML = "Loading page, please wait...";
+var d = new Date();
+d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
+var expires = "expires="+ d.toUTCString();
+document.cookie = "antibot_faa42e367c184285753f1d3bab08cd04="+obj.cookie+"; " + expires + "; path=/;";
+document.cookie = "lastcid="+obj.cid+"; " + expires + "; path=/;";
+location.reload(true);
+} else {
+Button();
+console.log('bad bot');
+}
+} else {
+//document.getElementById("btn").innerHTML = '✓✓✕';
+  console.log('other error');
+  if (b == 1) {Button();} else {CloudTest(window.atob('L3JvYm90cy50eHQ='), 5000, d, 1);}
+}
+};
+cloud.onerror = function(){
+//document.getElementById("btn").innerHTML = '✓✓✕';
+	console.log("error: "+cloud.status);
+	if (b == 1) {Button();} else {CloudTest(window.atob('L3JvYm90cy50eHQ='), 5000, d, 1);}
+}
+cloud.ontimeout = function () {
+  // timeout
+//document.getElementById("btn").innerHTML = '✓✓✕';
+  console.log('timeout');
+  if (b == 1) {Button();} else {CloudTest(window.atob('L3JvYm90cy50eHQ='), 5000, d, 1);}
+};
+cloud.send(d);
+}
+</script>
+</body>
+</html><!-- Time: 0.01409 Sec. -->
